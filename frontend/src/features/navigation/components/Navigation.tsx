@@ -13,9 +13,6 @@ export const Navigation = ({ links = defaultLinks, logo = 'Radiant Rewards' }: N
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center">
-          <span className="text-white font-bold text-sm">♦</span>
-        </div>
         <span className="font-bold text-lg text-gray-900 dark:text-white">{logo}</span>
       </div>
 
