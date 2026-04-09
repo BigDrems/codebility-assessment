@@ -34,3 +34,9 @@ export {
   HeroSection,
   type HeroSectionProps,
 } from './hero';
+
+// Benefits Feature
+export {
+  WhyChooseSection,
+  type WhyChooseSectionProps,
+} from './benefits';

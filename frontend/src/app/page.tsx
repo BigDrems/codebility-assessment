@@ -1,6 +1,6 @@
 'use client';
 
-import { Navigation, HeroSection } from '@/features';
+import { Navigation, HeroSection, WhyChooseSection } from '@/features';
 
 export default function Home() {
   return (
@@ -17,6 +17,9 @@ export default function Home() {
         secondaryButtonText="View Brands"
         stats={{ label: 'EARNED TODAY', value: '$42.50' }}
       />
+
+      {/* Why Choose Section */}
+      <WhyChooseSection />
     </div>
   );
 }
