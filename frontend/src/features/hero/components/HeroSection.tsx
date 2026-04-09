@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Button, Badge, Card } from '@/features/common';
 import type { HeroSectionProps } from '../types/hero.types';
 
@@ -21,7 +22,7 @@ export const HeroSection = ({
 
         {/* Heading */}
         <div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-600 via-purple-600 to-gray-900 dark:from-purple-400 dark:via-purple-400 dark:to-white bg-clip-text text-transparent leading-tight">
             {title}
           </h1>
         </div>
@@ -44,30 +45,33 @@ export const HeroSection = ({
 
       {/* Right Content - Product Display */}
       <div className="flex flex-col items-center justify-center relative">
-        {/* Gift Card Product */}
-        <Card variant="featured" className="w-full max-w-sm p-8 relative z-10">
-          <div className="aspect-square bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shadow-xl">
-            <div className="text-center text-white">
-              <div className="text-sm font-semibold tracking-widest">PREMIUM</div>
-              <div className="text-4xl font-bold mt-2">🎁</div>
-              <div className="text-sm font-semibold mt-4 tracking-widest">GIFT CARD</div>
-              <div className="text-xs mt-2 opacity-80">SAVE & EARN</div>
-            </div>
-          </div>
-        </Card>
+        {/* Gift Card Container with Earnings Badge */}
+        <div className="w-full max-w-sm relative">
+          {/* Premium Gift Card Image */}
+          <button className="relative z-10 w-full cursor-pointer hover:opacity-90 transition-opacity rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-purple-500">
+            <Image
+              src="/Premium Gift Card.png"
+              alt="Premium Gift Card"
+              width={400}
+              height={400}
+              className="w-full h-auto"
+              priority
+            />
+          </button>
 
-        {/* Earnings Badge */}
-        <Card variant="default" className="mt-6 px-6 py-3 bg-white dark:bg-gray-800 shadow-lg">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
-              <span className="text-purple-600 dark:text-purple-400">💰</span>
+          {/* Earnings Badge - Positioned on bottom left */}
+          <Card variant="default" className="absolute -left-6 -bottom-0.5 px-5 py-3 bg-red dark:bg-gray-800 shadow-lg z-20 rounded-full">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+                <span className="text-purple-600 dark:text-purple-400">💰</span>
+              </div>
+              <div>
+                <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">{stats.label}</div>
+                <div className="text-xl font-bold text-gray-900 dark:text-white">{stats.value}</div>
+              </div>
             </div>
-            <div>
-              <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">{stats.label}</div>
-              <div className="text-xl font-bold text-gray-900 dark:text-white">{stats.value}</div>
-            </div>
-          </div>
-        </Card>
+          </Card>
+        </div>
       </div>
     </section>
   );
