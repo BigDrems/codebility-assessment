@@ -11,7 +11,7 @@ export const Button = ({
   target,
   rel,
 }: ButtonProps) => {
-  const baseStyles = 'font-semibold rounded-full transition-all duration-200 inline-flex items-center justify-center gap-2';
+  const baseStyles = 'font-semibold font-poppins rounded-full transition-all duration-200 inline-flex items-center justify-center gap-2';
 
   const variantStyles = {
     primary: 'bg-purple-600 text-white hover:bg-purple-700 active:bg-purple-800',

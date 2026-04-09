@@ -2,7 +2,7 @@ import React from 'react';
 import type { BadgeProps } from '../types/badge.types';
 
 export const Badge = ({ variant = 'default', icon, children, className = '' }: BadgeProps) => {
-  const baseStyles = 'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium';
+  const baseStyles = 'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium font-poppins';
 
   const variantStyles = {
     default: 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200',
