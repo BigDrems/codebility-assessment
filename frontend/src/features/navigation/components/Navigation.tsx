@@ -13,7 +13,7 @@ export const Navigation = ({ links = defaultLinks, logo = 'Radiant Rewards' }: N
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
       <div className="flex items-center gap-2">
-        <span className="font-bold text-lg text-gray-900 dark:text-white">{logo}</span>
+        <span className="font-bold font-poppins text-lg text-gray-900 dark:text-white">{logo}</span>
       </div>
 
       <div className="hidden md:flex items-center gap-8">
@@ -21,7 +21,7 @@ export const Navigation = ({ links = defaultLinks, logo = 'Radiant Rewards' }: N
           <a
             key={link.href}
             href={link.href}
-            className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium text-sm"
+            className="text-gray-700 dark:text-gray-300 font-inter hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium text-sm"
           >
             {link.label}
           </a>
@@ -31,7 +31,7 @@ export const Navigation = ({ links = defaultLinks, logo = 'Radiant Rewards' }: N
       <div className="flex items-center gap-4">
         <a
           href="#login"
-          className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium text-sm"
+          className="text-gray-700 dark:text-gray-300 font-inter hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium text-sm"
         >
           Login
         </a>
